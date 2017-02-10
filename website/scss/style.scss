@@ -1,0 +1,810 @@
+// ---------------------- Variables ---------------------- //
+
+$mainDarkColor: #6c4242;
+$subColor: #b48686;
+$customGrey: darken(#f5f5f5, 15%);
+$white: #FFFFFF;
+// ---------------------- video as background  ---------------------- //
+
+
+video#bgvideo { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../imgs/chocolate.jpg') no-repeat;
+    background-size: cover; 
+    overflow: hidden;
+}
+
+
+
+
+
+// ---------------------- Basic Style  ---------------------- //
+:root {
+    font-size: 12px;
+}
+html {
+    display: block;
+}
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: url('../imgs/chocolate.jpg') no-repeat;
+    background-size: cover; 
+
+
+}
+.wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.buttons {
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    border-radius: 2rem;
+    padding: .6rem 3.5rem;
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: bordex-box;
+    letter-spacing: .2em;
+}
+.audiobutton {
+    background-color: $mainDarkColor;
+    border: 2px solid $mainDarkColor;
+    display: inline-block;
+
+    
+    &:hover {
+        background-color: $white;
+        color: $mainDarkColor;
+        cursor: pointer;
+        
+    }
+}
+.section {
+    text-align: center;
+    display: block;
+}
+
+
+// ---------------------- Banner Style  ---------------------- //
+#banner {
+    header {
+        padding: 2rem 0;
+    
+
+    #logo {
+        float: left;
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+        
+    nav {
+        float: right;
+        a {
+            color: $white;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 3rem;
+                &:hover {
+                    text-decoration: none;
+                    color: #b5948d;
+                    text-shadow:
+                       -1px -1px 0 #000,  
+                        1px -1px 0 #000,
+                        -1px 1px 0 #000,
+                         1px 1px 0 #000;
+                }
+        }
+    }
+    }
+}
+    
+    
+
+.welcomeAudio {
+    padding: 14rem 0 8rem 0;
+    text-align: center;
+
+    h1 {
+        color: $white;
+        padding-bottom: 2rem;
+    }
+}
+       
+    
+// ---------------------- Food Menu Style  ---------------------- //
+.section.featured {
+    color: #fff;
+    background: $mainDarkColor;
+    position: relative;
+    overflow: hidden;
+  &:after {
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: url('../imgs/romb3.png') center top/auto 200% repeat-x #fff;
+        background-color: $customGrey;
+        background-position: center bottom;
+        display: block;
+    }
+}
+.section.foodMenu {
+    .content {
+        text-align: center;
+        padding: 2rem 0 0;
+        width: 90%;
+        margin: auto;
+        max-width: 100em;
+        // -------- button style
+        .menuButton {
+            text-align: center;
+            margin-top: 4em;
+            margin-bottom: 1em;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                border-top: 2px solid #fff;
+                top: 50%;
+                right: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            a {
+                    color: $mainDarkColor;
+                    text-decoration: none;
+                }
+            .menuButtonInside {
+                position: relative;
+                z-index: 2;
+                background-color: $white;
+                letter-spacing: .25em;
+                text-transform: uppercase;
+                padding: 1.25em 2.5em;
+                border: 3px solid #fff;
+                border-radius: .6em;
+                display: inline-block;
+                box-sizing: border-box;
+                &:hover {
+                    color: $white;
+                    background-color: $mainDarkColor;
+                }
+            }
+        }
+        // -------- end of button style
+        .description {
+            font-size: 2rem;
+            margin-top: 15px;
+            
+        }
+        h2 {
+        display: inline-block;
+        margin: 0 auto;
+
+       /* font-family: sans-serif;*/
+        
+        .food-heading-span-1 {
+            font-size: 2rem;
+            text-indent: 3em;
+            text-transform: lowercase;
+            padding-bottom: .2em;
+        }
+        .food-heading-span-2 {
+            font-size: 10rem;
+            
+        }
+        
+        span {
+          //  font-family: inherit;
+            font-weight: 400;
+            line-height: .4;
+            letter-spacing: normal;
+            display: block;
+            font-style: normal;
+        }
+        
+    }
+        
+    }
+}
+// --- adaptive food menu title 
+@media (min-width: 640px) {
+    
+    .food-heading-span-1 {
+        font-size: 0.3rem;
+        padding-right: 5px;
+        
+    }
+    .food-heading-span-2 {
+        font-size: 2rem;
+    }
+   
+}
+@media (min-width: 900px){
+    .section.foodMenu {
+        margin-bottom: -10%;
+        .content {
+            h2{
+                width: 40%;
+
+            }
+        }
+        
+    }
+     .food-heading-span-1 {
+        font-size: 0.3rem;
+        padding-right: 5px;
+    }
+    .food-heading-span-2 {
+        font-size: 2rem;
+            
+    }
+}
+
+@media (max-width: 480px) {
+    .section.foodMenu .content h2 .food-heading-span-1 {
+        font-size: 1.5rem;
+        padding-right: 5px;
+        text-indent: 1em;
+        padding-bottom: 12px;
+    }
+    .section.foodMenu .content h2 .food-heading-span-2  {
+        font-size: 3rem;
+            
+    }
+
+}
+// --- end of adaptive food menu title
+
+@media (min-width: 800px){
+    
+    .section.featured:after {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+      }
+    .section.foodMenu {
+        padding: 8% 0 13%;
+        .description{
+            text-align: left;
+            width: 50%;
+            vertical-align: middle;
+            display: inline-block;
+            
+        }
+    }
+}
+
+// ---------------------- Section with floors Style  ---------------------- //
+
+.section.events {
+    padding: 0 0 8%;
+    margin: 0 0 -8%;
+    background: $customGrey;
+     header {
+            background: url('../imgs/whiteTablePressed.jpg') center/cover no-repeat;
+            position: relative;
+            display: block;
+         
+         &:before {
+            content: '';
+            padding-top: 37.5%;
+            display: block;
+         }
+         h2 {
+            height: 1.625em;
+            position: absolute;
+            color: #fff;
+            text-shadow: #000 0 0 120px; 
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            
+             span {
+                 font-weight: 300;
+                 font-style: normal;
+                 font-size: .214228em;
+                 letter-spacing: .5em;
+                 text-transform: uppercase;
+                 display: block;
+             }
+         }
+    }
+    .content {
+        padding-bottom: 18%;
+    }
+    
+    
+    
+}
+
+
+
+@media (min-width: 480px){
+    .section.events{
+    h2 {
+        font-size: 4em;
+        }
+          .content {
+        padding: 3%;
+        margin: auto;
+        overflow: hidden;
+   
+    }
+    }
+        span {
+            font-size: 1.2em;
+        }
+    .section.events header h2 {
+        height: 1.583333em;
+    }
+}
+@media (min-width: 640px){
+    .section.events {
+        h2 {
+        font-size: 4em;
+        }
+    
+    }
+
+        span {
+            font-size: 1.1607142em;
+        }
+    .section.events header h2 {
+        height: 1.5625em;
+    }
+}
+
+@media (min-width: 800px){
+    .section.events.content {
+        width: 90%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+@media (min-width: 960px){
+    .section.events.content {
+        position: relative;
+    }
+    span {
+        font-size: 1.66666667em;
+    }
+    .floor1, .floor2 {
+        width: 50%;
+        padding: 3%;
+        margin: 0;
+        float: left;
+        a {
+            text-decoration: none;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+        }
+        
+    }
+      .section.events h2 {
+        font-size: 9em;
+        span {
+            font-size: .16666666em;
+        }
+    }
+    .eventscontent:before {
+        content: '';
+        border-top: 2px solid #000;
+        display: block;
+        position: absolute;
+        right: 25%;
+        bottom: 3em;
+        left: 25%;
+    }
+    .eventscontent:after {
+        content: 'i';
+        width: 1.5em;
+        font-size: 4.5em;
+        background: $customGrey;
+        margin: auto;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0.2em;
+        left: 0;
+        z-index: 1;
+    }
+}
+.buttonsEvents {
+    text-align: center;
+    position: absolute;
+    width: 40%;
+    bottom: 2em;
+    .buttonFloorInside {
+            text-align: center;
+
+        background: #000;
+        color: $white;
+        border-color: #000;
+        bottom: -2em;
+        padding: 2rem;
+        border-radius: .6em;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            background: $white;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+}
+
+  
+@media(max-width: 960px){
+.floor2 {
+    padding-top: 2em;
+    border-top: 2px solid black;
+}
+.floor1 {
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+        .buttonsEvents {
+            text-align: center;
+            position: relative;
+            width: 100%;
+    }
+}
+.eventscontent {
+    position: relative;
+    padding: 0 0 8%;
+    margin: 0 0 -8%;
+    
+    
+}
+// ---------------------- TabViews Style  ---------------------- //
+
+.tabView .content {
+    width: 90%;
+    padding: 2em 1em;
+    margin: auto;
+    position: relative;
+    margin-bottom: 5em;
+    overflow: hidden;
+    p, h2 {
+        color: $white;
+
+    }
+
+}
+@media (min-width: 960px){
+    .buttons.tab-list{
+        direction: ltr;
+        width: 49%;
+        vertical-align: top;
+        padding-top: 25%;
+        display: inline-block;
+       
+    }
+}
+.buttons.tab-list {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 3em;
+    a {
+        text-decoration: none;
+        color: $mainDarkColor;
+
+    }
+    .tabButtonInside {
+        background-color: $white;
+
+        width: 60%;
+        margin: 0 auto 2em;
+        float: none;
+        display: block;
+        border: 2px solid darken(white, 30%);
+        padding: 1.25em 2.5em;
+        border-radius: 1.25em 2.5em;
+        &:hover {
+            text-decoration: none;
+        }
+        a:active {
+            text-decoration: none;
+            color: #f5f5f5;
+        }
+      
+    }
+}
+@media (min-width: 960px) {
+    .currentContent {
+        width: 49%;
+        text-align: left;
+        vertical-align: top;
+        display: inline-block;
+        float: right;
+        left: auto;
+        color: $white;
+        line-height: 3rem;
+        img {
+            width: 140%;
+            margin: -3.5em auto -25% -15%;
+        }
+       
+    }
+}
+.currentContent img {
+            width: 120%;
+            margin: -3.5em auto -25% -15%;
+        }
+
+
+.currentContent h2{
+    
+      margin: 1.5em auto 0;
+}
+@media (min-width: 480px) {
+    .currentContent h2 {
+        font-size: 6em;
+        margin: 1em auto 0;
+
+    }
+}
+@media (min-width: 960px) {
+    .currentContent h2 {
+        font-size: 6em;
+        margin: 1em auto 0;
+    }
+}
+@media (min-width: 1280px) {
+    .currentContent h2 {
+        font-size: 7em;
+    }
+}
+.currentContent {
+    .barService{
+        transition: opacity 0.5s ease;
+        position: relative;
+
+    }
+    .sushiRolls{
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        position: absolute;
+    }
+}
+// ---------------------- Contact Style  ---------------------- //
+
+
+   
+@media (min-width: 800px){
+    .section.contact .content {
+        max-width: 60em;
+        
+    }
+}
+@media (min-width: 640px){
+    .section.contact header {
+        border-bottom-width: 2px;
+        padding-bottom: 2em;
+        margin-bottom: 3em;
+        h2 {
+            font-weight: 400;
+        }
+    }
+}
+
+.section.contact .content {
+        margin: auto;
+        padding: 2em 1em;
+        
+    }
+.section.contact {
+    background: $customGrey;
+    
+    }
+    
+.section.contact  header {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2em;
+    margin-bottom: 3em;
+    
+  
+        span {
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: .5em;
+            text-transform: uppercase;
+            display: block;
+        }
+    
+}
+
+/*form-section*/
+#message {
+    resize: vertical;
+}
+.submitButton {
+    background-color: $mainDarkColor;
+    color: white;
+    border: 2px solid;
+    border-color: $mainDarkColor;
+    &:hover {
+        background-color: white;
+        color: $mainDarkColor;
+        border-color: $mainDarkColor;
+    }
+    
+}
+/*validation style*/
+
+.help-block {
+  display: none;
+}
+
+.has-error .help-block {
+  display: block;
+}
+.hidden {
+    display: none;
+}
+form .help-block {
+    font-size: 1em;
+    font-weight: 600;
+ 
+    color: #250248 !important;
+}
+ 
+/*footer*/
+footer {
+    background-color: $mainDarkColor;
+    p {
+        display: block;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 3px solid white;
+        padding: 4em;
+        color: #f5f5f5;
+    }
+    ul {
+        margin-bottom: 0;
+        list-style-type: none;
+        color: #f5f5f5;
+        padding: 2em;
+        margin-left: 4em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// ---------------------- Modal Window Style  ---------------------- //
+#modalWindow{
+
+  background-color: rgba(227, 212, 212, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
+  z-index: 2;
+
+}
+.showing-modal {
+  overflow: hidden;
+}
+.modalContent {
+  background-color: rgba(227, 212, 212, 0.84);
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+    overflow: auto;
+    text-align: center;
+    
+    
+}
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+
+&:hover,
+&:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+}
+
+// ---------------- Back to Top Button -------------- //
+
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(232, 98, 86, 0.8) url(../imgs/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #e86256;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
+}

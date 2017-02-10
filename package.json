@@ -1,0 +1,21 @@
+{
+  "name": "rendezvous",
+  "version": "1.0.0",
+  "description": "restaurant website",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "lightbox2": "^2.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "stsglnt",
+  "license": "ISC"
+}
