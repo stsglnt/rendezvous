@@ -23,7 +23,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Comfortaa', cursive, sans-serif;
   -webkit-font-smoothing: antialiased;
   background: url("../imgs/chocolate.jpg") no-repeat;
   background-size: cover; }
@@ -79,7 +79,10 @@ body {
       #banner header nav a:hover {
         text-decoration: none;
         color: #b5948d;
-        text-shadow: -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+        text-shadow: -1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+ 1px 1px 0 #000; }
 
 .welcomeAudio {
   padding: 14rem 0 8rem 0;
@@ -178,6 +181,9 @@ body {
     font-size: 2rem; } }
 
 @media (max-width: 480px) {
+      .description p {
+        font-size: 1.5rem;
+    }
   .section.foodMenu .content h2 .food-heading-span-1 {
     font-size: 1.5rem;
     padding-right: 5px;
@@ -231,8 +237,13 @@ body {
         display: block; }
   .section.events .content {
     padding-bottom: 18%; }
+#floors-description-p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 @media (min-width: 480px) {
+  
   .section.events h2 {
     font-size: 4em; }
   .section.events .content {
@@ -377,6 +388,7 @@ body {
 
 @media (min-width: 960px) {
   .currentContent {
+    padding-top: 50px;
     width: 49%;
     text-align: left;
     vertical-align: top;

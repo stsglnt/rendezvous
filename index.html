@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html ng-app="serviceApp">
+<head>
+<meta charset="utf-8" />
+<title>Рандеву бар-ресторан</title>
+    <meta name="description" content="Рандеву — пропонує для вас незабутні враження, смачні страви, приємну атмосферу та чудовий відпочинок.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./website/css/style.css">
+    <link rel="stylesheet" href="./node_modules/lightbox2/dist/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+
+
+<body ng-controller="serviceCtrl">
+    <div id="videoWrapper">
+
+    </div>
+   <section id="banner">
+      <a href="topPage"></a>
+       <div class="wrapper">
+       <header>
+        <div id="logo"><img src="website/imgs/logo-png.png" alt=""></div>
+       
+    
+   
+               
+                <nav>
+                   
+                  
+                    <a href="#photo">Фото</a>
+                    <a href="#contact">Контакти</a>
+                   
+               </nav>
+        </header>   
+            <div class="welcomeAudio">
+               <h1>Запрошуємо на рандеву</h1>
+                <div class="buttons audiobutton">Прослухати
+                <audio id="playAudio">
+                    <source src="website/audio/rendezvous.mp3">
+                </audio>
+                </div>
+            </div>
+        
+        </div>    
+    </section>
+      
+       <section class="section foodMenu featured">
+        <a name="menu"></a>
+
+         <div class="content">
+                <h2>
+                   <span class="food-heading-span-1">Європейська</span>
+                   <span class="food-heading-span-2">Кухня</span>
+               </h2>
+               <div class="description">
+                   <p>Смачно пообідати під час обідньої перерви, навіть якщо ви проїздом у Червонограді, або замовити банкет - це вирішувати вам, а наші кухарі зроблять все щоб ви залишилися задоволені. Бар-Ресторан «Рандеву»— пропонує для вас незабутні враження, смачні страви, приємну атмосферу та чудовий відпочинок. Нашу гостинність ви відчуєте вже з перших хвилин перебування в ресторані —, ввічливе обслуговування, жива музика та смачна кухня — важливі критерії, яких дотримується адміністрація бару - ресторану «Рандеву».</p>
+               </div>
+               <!--<div class="buttons menuButton"><a href="#" class="menuButtonInside" id="open">Меню</a></div>-->
+            </div>
+               
+       </section>
+       
+       <section class="events section alt">
+                 <a name="photo"></a>
+
+          <div class="content eventscontent">
+              <header>
+                  <h2>будь-які події
+                      <span>Великі чи малі</span>
+                  </h2>
+              </header>
+                  <br>
+                <p  id="floors-description-p">Бенкетна зала, на другому поверсі, яка може вмістити до 100 осіб,— ділові прийоми, весілля та святкові бенкети, корпоративні вечірки, випускні вечори, святкування Дня народження, дитячі свята, фуршети — все це робить бар - ресторан «Рандеву» одним з кращих місць для проведення Вашого бенкету чи зустрічі. Святкова затишна атмосфера у нашому ресторані подарує яскраві незабутні враження, емоції та приємні спогади. Для невеликих бенкетів та святкувань кількістю до 12 осіб або для компаній, які бажають усамітнитися, чудово підійде  VIP-зала. Тут у колі найближчих друзів Ваше свято - романтична вечеря, ділові перемовини, посиденьки з найкращими друзями, сімейний вечір пройде на найвищому рівні.</p>
+             <div class="restFloors">
+                   <div class="floor1">
+                     <div class="buttonsEvents buttons">
+                        <a href="website/imgs/Photo.jpg" data-lightbox='floor1' class="buttonFloorInside">Перший поверх</a>
+                        <a href="website/imgs/Photo2.jpg" data-lightbox='floor1'></a>
+                        <a href="website/imgs/Photo3.jpg" data-lightbox='floor1'></a>
+                        <a href="website/imgs/1st-1.jpg" data-lightbox='floor1'></a>
+                     </div>
+                  </div>
+                  <div class="floor2">
+                  
+                      <div class="buttonsEvents buttons">
+                         <a href="website/imgs/2nd-1.jpg" class="buttonFloorInside" data-lightbox='floor'>Другий поверх</a>
+                          <a href="website/imgs/2nd-2.jpg" data-lightbox='floor'></a>
+                          <a href="website/imgs/2nd-3.jpg" data-lightbox='floor'></a>
+                          <a href="website/imgs/2nd-4.jpg" data-lightbox='floor'></a>
+                     </div>
+                  </div>
+              </div>
+              
+          </div>
+         
+       </section>
+       
+       <section class="tabView section">
+          <div class="content">
+            <div class="currentContent">
+           
+              <div class="barService tabViews">
+                
+                   <h2>Жива музика</h2>
+                    <p>Насолоджуйтеся живою музикую кожних вихідних.</p>
+               </div>
+               <div class="sushiRolls tabViews">
+                  
+                   <h2>Суші роли</h2>
+                    <p>Для гурманів ми пропонуємо різноманітний набір суші ролів. Ви обовязвоко знайдете свій улюблений рол тут.</p>
+                    </div>
+               </div>
+            <div class="buttons tab-list">
+              <a href="" class="tabButtonInside" id="changeToBar" >Жива музика </a>
+              <a href="" class="tabButtonInside" id="changeToRolls">Суші роли</a>
+            </div>
+            
+           
+          </div>
+           
+       </section>
+        
+       <section class="contact section">
+                 <a name="contact"></a>
+
+          <div class="content">
+                <header>
+                   <h2>Скажіть привіт</h2>
+                       <span>Ми будемо раді вас чути</span>
+                 
+               </header>
+               
+            <form id="form" name="contactForm" class="form-horizontal"  method="post" ng-submit=submit(contactForm)>
+               
+                <div class="form-group">
+                    <input type="hidden" name="project_name" value="portfolio-stsglnt">    
+                    <input type="hidden" name="admin_email" value="stanislav.galiant@gmail.com">    
+                    <input type="hidden" name="form_subject" value="portfolio hire">
+                   <div class="col-md-6" show-errors> 
+                       <label for="inputName" class="control-label">Ім'я</label>
+                       <input name="inputName" type="text" class="form-control input-lg" id="name" required ng-model="user.name"> 
+                        <p class="help-block" ng-if="contactForm.inputName.$error.required">Це поле є обов'язковим</p>
+                    </div>
+                
+                    
+                   <div class="col-md-6" show-errors>
+                        <label for="inputLast" class=" control-label">Прізвище</label>
+                        <input name="inputLastName" type="text" class="form-control input-lg" id="inputLast" required ng-model="user.lastName">
+                        <p class="help-block" ng-if="contactForm.inputLastName.$error.required">Це поле є обов'язковим</p>
+                    </div>
+                                
+   
+                    <div class="col-md-12 " show-errors>
+                        <label for="email" class="control-label">Ваш email</label>
+                        <input type="email" class="form-control input-lg" id="email" required ng-model="user.email" name="inputEmail">
+                        <p class="help-block" ng-if="contactForm.inputEmail.$error.required">Це поле є обов'язковим</p>
+                    </div>
+                    
+                    <div class="col-md-12 ">
+                        <label for="subject" class="control-label">Тема</label>
+                        <input type="text" name="inputSubject" class="form-control input-lg" id="subject" ng-model="contactForm.subject">
+                    </div> 
+                    
+                    <div class="col-md-12 " show-errors>
+                        <label for="message" class="control-label">Повідомлення</label>
+                        <textarea class="form-control input-lg" id="message" required ng-model="user.message" name="inputMessage"></textarea>
+                        <p class="help-block" ng-if="contactForm.inputMessage.$error.required">Це поле є обов'язковим</p>
+                    </div>
+                </div>  
+                <p id="send-result"></p>   
+               <div>
+                    <button class="buttons submitButton">Зв'язатися з нами</button>
+                </div>
+            </form>
+           </div>
+      </section>
+    
+     <footer>
+        <div class="content" itemscope itemtype="http://schema.org/Organization">
+            <p itemprop="name">Якщо у вас виникли запитання стосовно того як організувати бенкет, відсвяткувати ювілей чи провести корпоративну вечірку - зателефонуйте до нас та отримайте всю необхідну інформацію.</p>
+            <ul class="contacts">
+                <li itemprop="telephone">03249 42615</li>
+                <li itemprop="telephone">093 923 69 29</li>
+                <li itemprop="telephone">067 599 20 01</li><br>
+                <li itemprop="email">sokgrm@mail.ru</li>
+            </ul>
+        </div>
+    
+    </footer>
+    
+
+   
+   
+   <!-- ------------------ Modal-menu-Window ------------------ -->
+   
+       
+       <div id="modalWindow">
+       <div class='closeButton'>X</div>
+        <div class="modalContent">
+              
+           </div>
+       </div>
+   
+
+   
+   
+   	<a href="#0" class="cd-top">Top</a>
+
+<script src="./node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+<script src="./app.bundle.js"></script>
+ 
+ 
+</body>
+</html>
